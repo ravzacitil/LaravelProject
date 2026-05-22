@@ -51,7 +51,7 @@ class CheckoutController extends Controller
         $cart->load('items.product');
 
         if ($cart->isEmpty()) {
-            return redirect()->route('shop.cart')
+            return redirect()->route('shop.cart.index')
                              ->with('error', 'Your cart is empty.');
         }
 
