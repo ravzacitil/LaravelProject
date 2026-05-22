@@ -173,7 +173,7 @@ nexus-shop/
 
 ---
 
-## 👩‍💻 Developer
+Submission Details
 
 **Ravza Çitil** — Student ID: 20222022441  
 Advanced Web Programming — End of Semester Project  
