@@ -1,3 +1,4 @@
+{{-- Nexus Shop - Main Layout - Updated navigation and footer --}}
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
