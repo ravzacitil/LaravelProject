@@ -36,6 +36,9 @@
 
 {{-- Table --}}
 <div class="bg-white rounded-2xl border border-zinc-100 overflow-hidden">
+<div class="px-5 py-3 border-b border-zinc-50 text-xs text-zinc-400">
+    {{ $products->total() }} product(s) found
+</div>
     <table class="w-full text-sm">
         <thead>
             <tr class="border-b border-zinc-100">
