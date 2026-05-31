@@ -26,7 +26,7 @@
                         All <span class="italic font-semibold">Products</span>
                     @endif
                 </h1>
-                <p class="text-zinc-400 mt-1 text-sm">{{ $products->total() }} {{ Str::plural('product', $products->total()) }} found</p>
+                <p class="text-zinc-400 mt-1 text-sm">{{ $products->total() }} {{ Str::plural('product', $products->total()) }} found matching your search</p>
             </div>
 
             {{-- Sort --}}
