@@ -191,7 +191,7 @@
                     </button>
 
                     <p class="text-xs text-zinc-400 text-center mt-3">
-                        By placing your order you agree to our <a href="#" class="underline">Terms</a> & <a href="#" class="underline">Privacy Policy</a>.
+                        By placing your order you agree to our <a href="{{ route('shop.terms') }}" class="underline">Terms</a> & <a href="{{ route('shop.privacy') }}" class="underline">Privacy Policy</a>.
                     </p>
                 </div>
             </div>
