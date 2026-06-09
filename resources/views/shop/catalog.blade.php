@@ -90,7 +90,24 @@
                         @endforeach
                     </div>
                 </div>
-
+{{-- Brand filter --}}
+<div class="mb-7">
+    <label class="block text-xs font-semibold text-zinc-400 uppercase tracking-widest mb-3">Brand</label>
+    <div class="space-y-1">
+        @php
+            $brands = \App\Models\Product::active()->whereNotNull('brand')->distinct()->pluck('brand')->sort();
+        @endphp
+        @foreach($brands as $brand)
+            <label class="flex items-center gap-2.5 py-1 cursor-pointer group">
+                <input type="checkbox" name="brand[]" value="{{ $brand }}"
+                       {{ in_array($brand, request('brand', [])) ? 'checked' : '' }}
+                       onchange="this.form.submit()"
+                       class="text-brand-600 focus:ring-brand-500 border-zinc-300 rounded">
+                <span class="text-sm text-zinc-700 group-hover:text-zinc-900 transition-colors">{{ $brand }}</span>
+            </label>
+        @endforeach
+    </div>
+</div>
                 {{-- Price range --}}
                 <div class="mb-7">
                     <label class="block text-xs font-semibold text-zinc-400 uppercase tracking-widest mb-3">Price Range</label>
