@@ -19,6 +19,9 @@ class ProductController extends Controller
 
         // Filter by category
         if ($request->filled('category')) {
+if ($request->filled('brand')) {
+    $query->whereIn('brand', $request->brand);
+}
             $category = Category::where('slug', $request->category)->firstOrFail();
             $query->inCategory($category->id);
         } else {
